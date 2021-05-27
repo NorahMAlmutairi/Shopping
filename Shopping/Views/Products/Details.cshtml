@@ -1,0 +1,32 @@
+﻿
+@{
+
+    var items = (ProductModel)ViewData["products"];
+    var color = ViewData["Color"];
+    Layout = "_LayoutWeb";
+}
+
+
+<h1>مكتبة نوره</h1>
+<h3>التفاصيل</h3>
+<table class="table" style="background-color:@color">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+            <tr>
+                <th scope="row">@items.Id</th>
+                <td>@items.Name</td>
+                <td>@items.Price</td>
+                <td><img style="width:200px; height:200px" src="@items.Image" alt="@items.Image" /></td>
+               
+            </tr>
+        
+    </tbody>
+</table>
